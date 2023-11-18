@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Danh Mục Sản Phẩm</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 56px;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .product-category,
+        .product-list {
+            margin-bottom: 30px;
+        }
+
+        .product-card {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .product-img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product-price {
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        .pagination-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            /* Điều chỉnh khoảng cách từ phân trang đến nội dung */
+        }
+
+        .pagination {
+            display: inline-flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .page-item {
+            margin: 0;
+        }
+
+        .page-link {
+            color: #fff;
+            /* Màu chữ */
+            background-color: #000;
+            /* Màu nền */
+            border: 1px solid white;
+            /* Viền */
+            padding: 8px 12px;
+            /* Kích thước padding */
+            text-decoration: none;
+            /* Loại bỏ đường gạch chân mặc định cho liên kết */
+            border-radius: 5px;
+            /* Bo tròn góc */
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+
+
+        <!-- Danh mục và Sản phẩm -->
+        <div class="row">
+            <!-- Danh mục -->
+            <div class="col-md-2">
+                <div class="title">Danh mục </div>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#all-products">Tất cả sản phẩm</a></li>
+                    <li class="list-group-item"><a href="#ao-thun">Áo Thun</a></li>
+                    <li class="list-group-item"><a href="#babytee">Áo Khoác</a></li>
+                    <li class="list-group-item"><a href="#ao-polo">Áo Polo</a></li>
+                    <li class="list-group-item"><a href="#quan">Quần</a></li>
+                    <li class="list-group-item"><a href="#sweater">Sweater</a></li>
+
+                </ul>
+            </div>
+
+            <!-- Sản phẩm -->
+            <div class="col-md-10">
+                <div class="title">Tất Cả Sản phẩm</div>
+                <!-- Sản phẩm trong danh mục "Tất cả sản phẩm" -->
+                <div class="product-list">
+                    <div class="row">
+                        <!-- Sản phẩm 1 -->
+                        <div class="col-md-3">
+                            <div class="card product-card">
+                                <img
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/415/697/products/2-3c0dd869-2595-4331-a7aa-3748d120e5e8.jpg?v=1697683789453">
+                                <div class="card-body">
+                                    <p class="card-text">Áo Thun Localbrand Oversize</p>
+                                    <p><strong><span class="product-price">300.000
+                                            </span></strong><span><strong>250.000</strong></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sản phẩm 2 -->
+                        <div class="col-md-3">
+                            <div class="card product-card">
+                                <img class="card-img-top"
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/415/697/products/1-c3eb1db4-6cc5-4f09-820d-cdad25250a17.jpg?v=1697683787577">
+                                <div class="card-body">
+                                    <p class="card-text">Áo Thun Localbrand Unisex</p>
+                                    <p><strong><span class="product-price">300.000
+                                            </span></strong><span><strong>250.000</strong></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sản phẩm 3 -->
+                        <div class="col-md-3">
+                            <div class="card product-card">
+                                <img class="card-img-top"
+                                    src="https://bizweb.dktcdn.net/100/415/697/products/nta101-1cq449oq-1-c49m-hinh-mat-truoc-0.jpg?v=1697719376890">
+                                <div class="card-body">
+                                    <p class="card-text">Áo Thun Localbrand Oversize</p>
+                                    <p><strong><span class="product-price">300.000
+                                            </span></strong><span><strong>250.000</strong></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card product-card">
+                                <img class="card-img-top"
+                                    src="https://bizweb.dktcdn.net/100/415/697/products/nta101-arg443lf-1-xvq3-hinh-mat-truoc-0.jpg?v=1693562410037">
+                                <div class="card-body">
+                                    <p class="card-text">Áo Thun Localbrand Oversize</p>
+                                    <p><strong><span class="product-price">300.000
+                                            </span></strong><span><strong>250.000</strong></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Thêm các sản phẩm khác tương tự -->
+                    </div>
+                    <div class="row">
+                        <!-- Sản phẩm 1 -->
+                        <div class="col-md-3">
+                            <div class="card product-card">
+                                <img class="card-img-top"
+                                    src="https://bizweb.dktcdn.net/100/415/697/products/nta101-gv4zmaor-1-iedr-hinh-mat-truoc-0.jpg?v=1697719376890">
+                                <div class="card-body">
+                                    <p class="card-text">Áo Thun Localbrand </p>
+                                    <p><strong><span class="product-price">300.000
+                                            </span></strong><span><strong>250.000</strong></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sản phẩm 2 -->
+                        <div class="col-md-3">
+                            <div class="card product-card">
+                                <img class="card-img-top"
+                                    src="https://bizweb.dktcdn.net/100/415/697/products/te9180-ila0i406-1-ehnu-hinh-mat-truoc-0.jpg?v=1690531756000">
+                                <div class="card-body">
+                                    <p class="card-text">Áo Thun Localbrand</p>
+                                    <p><strong><span class="product-price">300.000
+                                            </span></strong><span><strong>250.000</strong></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sản phẩm 3 -->
+                        <div class="col-md-3">
+                            <div class="card product-card">
+                                <img class="card-img-top"
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/415/697/products/ts209.jpg?v=1695720506783">
+                                <div class="card-body">
+                                    <p class="card-text">Áo Thun Localbrand</p>
+                                    <p><strong><span class="product-price">300.000
+                                            </span></strong><span><strong>250.000</strong></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card product-card">
+                                <img class="card-img-top"
+                                    src="https://bizweb.dktcdn.net/100/415/697/products/1-c32fdd05-f1b0-417a-b294-a9041ddecf52.jpg?v=1692012309650">
+                                <div class="card-body">
+                                    <p class="card-text">Áo Thun Localbrand</p>
+                                    <p><strong><span class="product-price">300.000
+                                            </span></strong><span><strong>250.000</strong></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Thêm các sản phẩm khác tương tự -->
+                    </div>
+                    <div class="row">
+                        <!-- Sản phẩm 1 -->
+                        <div class="col-md-3">
+                            <div class="card product-card">
+                                <img class="card-img-top"
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/415/697/products/1-c3eb1db4-6cc5-4f09-820d-cdad25250a17.jpg?v=1697683787577">
+                                <div class="card-body">
+                                    <p class="card-text">Áo Thun Localbrand</p>
+                                    <p><strong><span class="product-price">300.000
+                                            </span></strong><span><strong>250.000</strong></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sản phẩm 2 -->
+                        <div class="col-md-3">
+                            <div class="card product-card">
+                                <img class="card-img-top"
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/415/697/products/1-c3eb1db4-6cc5-4f09-820d-cdad25250a17.jpg?v=1697683787577">
+                                <div class="card-body">
+                                    <p class="card-text">Áo Thun Localbrand</p>
+                                    <p><strong><span class="product-price">300.000
+                                            </span></strong><span><strong>250.000</strong></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sản phẩm 3 -->
+                        <div class="col-md-3">
+                            <div class="card product-card">
+                                <img class="card-img-top"
+                                    src="https://bizweb.dktcdn.net/100/415/697/products/nta101-1cq449oq-1-c49m-hinh-mat-truoc-0.jpg?v=1697719376890">
+                                <div class="card-body">
+                                    <p class="card-text">Áo Thun Localbrand</p>
+                                    <p><strong><span class="product-price">300.000
+                                            </span></strong><span><strong>250.000</strong></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card product-card">
+                                <img class="card-img-top"
+                                    src="https://bizweb.dktcdn.net/100/415/697/products/nta101-gv4zmaor-1-al11-hinh-mat-truoc-0.jpg?v=1697719376890">
+                                <div class="card-body">
+                                    <p class="card-text">Áo Thun Localbrand</p>
+                                    <p><strong><span class="product-price">300.000
+                                            </span></strong><span><strong>250.000</strong></span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Phân trang -->
+                    <nav class="pagination-container">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#">
+                                    <span a>&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span>&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bổ sung các danh mục và sản phẩm tương ứng khác -->
+
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
