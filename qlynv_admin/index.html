@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách nhân viên</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #555;
+            color: #fff;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+            border: 1px solid #ddd;
+            margin: 0 4px;
+        }
+
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid #4CAF50;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DANH SÁCH NHÂN VIÊN</h1>
+    </header>
+    <section>
+        <table>
+            <tr>
+                <th>Fullname</th>
+                <th>Customers</th>
+                <th>Directors</th>
+                <th>Staffs</th>
+            </tr>
+            
+            <tr>
+                <td>Đinh Thanh Hải</td>
+                <td><input type="checkbox" checked></td>
+                <td><input type="checkbox" checked></td>
+                <td><input type="checkbox" checked></td>
+            </tr>
+            <tr>
+                <td>Nguyễn Văn Hạnh</td>
+                <td><input type="checkbox" checked></td>
+                <td><input type="checkbox" checked></td>
+                <td><input type="checkbox" checked></td>
+            </tr>
+            <tr>
+                <td>Huỳnh Văn Huy</td>
+                <td><input type="checkbox" checked></td>
+                <td><input type="checkbox" checked></td>
+                <td><input type="checkbox" checked></td>
+            </tr>
+            <tr>
+                <td>Trần Đắc Quang</td>
+                <td><input type="checkbox" checked></td>
+                <td><input type="checkbox" checked></td>
+                <td><input type="checkbox" checked></td>
+            </tr>
+            <tr>
+                <td>Trần Quang Nhiên</td>
+                <td><input type="checkbox" checked></td>
+                <td><input type="checkbox" checked></td>
+                <td><input type="checkbox" checked></td>
+            </tr>
+            <tr>
+                <td>Lê Văn Hùng</td>
+                <td><input type="checkbox" checked></td>
+                <td><input type="checkbox" checked></td>
+                <td><input type="checkbox" checked></td>
+            </tr>
+            <tr>
+                <td>Võ Văn Huy Hoàng</td>
+                <td><input type="checkbox" checked></td>
+                <td><input type="checkbox" checked></td>
+                <td><input type="checkbox" checked></td>
+            </tr>
+            <tr>
+                <td>Nguyễn Văn Phúc</td>
+                <td><input type="checkbox" checked></td>
+                <td><input type="checkbox" checked></td>
+                <td><input type="checkbox" checked></td>
+            </tr>
+            <tr>
+                <td>Trần Quốc Tuấn</td>
+                <td><input type="checkbox" checked></td>
+                <td><input type="checkbox" checked></td>
+                <td><input type="checkbox" checked></td>
+            </tr>
+            <tr>
+                <td>Võ Văn Hiếu</td>
+                <td><input type="checkbox" checked></td>
+                <td><input type="checkbox" checked></td>
+                <td><input type="checkbox" checked></td>
+            </tr>
+            
+        </table>
+        <div class="pagination">
+            <a href="#" class="prev">&laquo; Previous</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">Next &raquo;</a>
+            </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-icons@1.18.0/font/bootstrap-icons.css"></script>
+</body>
+</html>
