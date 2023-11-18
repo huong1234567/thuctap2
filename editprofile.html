@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <main class="main-content">
+		<div class="page-header-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<div class="page-header-content">
+							<nav class="breadcrumb-area">
+								<ul class="breadcrumb">
+									<li>
+										<a href="/">Home</a>
+									</li>
+									<li class="breadcrumb-sep">/</li>
+									<li>Edit Profile</li>
+								</ul>
+							</nav>
+							<h4 class="title">Edit Profile</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section class="account-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-8 m-auto">
+						<div class="account-form-wrap">
+							<div class="login-form">
+								<div class="content">
+									<h4 class="title">Edit personal information</h4>
+									<p>Please correct the information below.</p>
+								</div>
+								<form th:object="${account}" th:action="@{/auth/login}" method="post">
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label class="form-label">FullName</label>
+												<input th:field="*{fullname}" class="form-control mb-1" type="text"
+													placeholder="Enter your fullname">
+												<small th:errors="*{fullname}" style="color: red"></small>
+											</div>
+										</div>
+                                        <div class="col-12">
+											<div class="form-group">
+												<label class="form-label">Username</label>
+												<input th:field="*{username}" class="form-control mb-1" type="text"
+													placeholder="Enter your username">
+												<small th:errors="*{username}" style="color: red"></small>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-group">
+												<label class="form-label">Birthday</label>
+												<input th:field="*{birthday}" class="form-control mb-1" type="date"
+													placeholder="Enter your birthday">
+												<small th:errors="*{birthday}" style="color: red"></small>
+											</div>
+										</div>
+                                        <div class="col-12">
+											<div class="form-group">
+												<label class="form-label">Phone</label>
+												<input th:field="*{phone}" class="form-control mb-1" type="number"
+													placeholder="Enter your phone">
+												<small th:errors="*{phone}" style="color: red"></small>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-group">
+												<label class="form-label">Email</label>
+												<input th:field="*{email}" class="form-control mb-1" type="email"
+													placeholder="Enter your email">
+												<small th:errors="*{email}" style="color: red"></small>
+											</div>
+										</div>
+                                        <div class="col-12">
+											<div class="form-group">
+												<label class="form-label">Address</label>
+												<input th:field="*{address}" class="form-control mb-1" type="text"
+													placeholder="Enter your address">
+												<small th:errors="*{address}" style="color: red"></small>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="login-form-group">
+												<button class="btn-sign" type="submit">Update Info</button>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
