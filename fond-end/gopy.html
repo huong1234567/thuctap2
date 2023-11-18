@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Feedback</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="css/style.css" />
+
+  </head>
+  <body>
+
+
+
+    <div class="container">
+  <div class="comment-box gradient-bg">
+  <h2 class="comment-title">Góp ý</h2>
+  <br>
+  <form>
+    <div class="form-group">
+      <label for="name">Họ Tên:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name">
+    </div>
+    <div class="form-group">
+      <label for="email">SDT:</label>
+      <input type="SDT" id="SDT" name="SDT" placeholder="Enter your SDT">
+
+    </div>
+    <div class="form-group">
+      <label for="noidung">Nội dung:</label>
+      <textarea id="noidung" name="noidung" placeholder="Type your content here"></textarea>
+    </div>
+    <button type="submit" class="btn-submit" onclick="showAlert()">Submit</button>
+
+  </form>
+</div>
+</div>
+
+
+<script src="js/script.js"></script>
+
+<script>
+    function showAlert() { 
+      // Lấy giá trị từ các trường input
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('SDT').value;
+      var noidung = document.getElementById('noidung').value;
+  
+      // Kiểm tra xem các trường có được điền đầy đủ hay không
+      if (name && email && noidung) {
+        // Hiển thị thông báo
+        alert('Góp ý đã được gửi. Cảm ơn, ' + name + '!');
+      } else {
+        alert('Vui lòng điền đầy đủ thông tin.');
+      }
+    }
+  </script>
+  
+
+
+  </body>
+</html>

@@ -1,0 +1,55 @@
+body {
+  text-align: center;
+
+  }
+
+table {
+
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+  }
+  
+  .table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-style: ridge ;
+    border-radius: 20px ;
+    border-color: antiquewhite;
+    width: 60%;
+    margin: auto;
+    background-color: azure;
+  
+}
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  tr:hover {background-color: aqua;}
+
+  .pagination {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .page {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 4px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: #333;
+  }
+  .page.active {
+    background-color: #333;
+    color: #fff;
+  }
