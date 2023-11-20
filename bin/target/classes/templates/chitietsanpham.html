@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Sản Phẩm</title>
+    <!-- Nhúng Bootstrap CSS từ CDN -->
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .price {
+        color: orangered;
+        text-align: center;
+        font-weight: bolder;
+        font-size: 40px;
+        vertical-align: middle;
+    }
+
+    .decrease {
+        background-color: orangered;
+        font-size: 17px;
+        color: white;
+        vertical-align: middle;
+        margin-left: 5px;
+    }
+
+    .quantity-btn {
+        margin-right: 0px;
+        margin-left: 0px;
+        border: 0.5px solid grey;
+    }
+
+    .btnthemgiohang {
+        background-color: #ffeeee;
+        padding: 4px;
+        border: 0.5px solid orangered;
+        color: orangered;
+
+    }
+
+    .btnmuangay {
+        color: white;
+        background-color: orangered;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border: none;
+        margin-left: 10px;
+    }
+
+    .start {
+        font-size: 30px;
+        color: #ffcc00;
+    }
+
+    .sptt {
+        text-align: center;
+    }
+
+    .my-button:hover {
+        box-shadow: 0 0 10px orangered;
+    }
+</style>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Hình ảnh sản phẩm -->
+            <div class="col-lg-4">
+                <img src="https://down-vn.img.susercontent.com/file/59ae3acc4652ae5ac0ff53caf8c967b3"
+                    alt="Product Image" class="img-fluid">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div>
+                                <img src="https://down-vn.img.susercontent.com/file/c72714f5358d169fcf81a9bdeafb5590"
+                                    alt="Los Angeles" width="100">
+                                <img src="https://down-vn.img.susercontent.com/file/33d99eaa74c7f876a033b5bbf2808d16"
+                                    alt="Los Angeles" width="100">
+                                <img src="https://down-vn.img.susercontent.com/file/d123d41a250abbd86271c08012adabef"
+                                    alt="Los Angeles" width="100">
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="https://down-vn.img.susercontent.com/file/0844c54a38812c8d61260d960e2850fe"
+                                alt="Los Angeles" width="100">
+                        </div>
+
+
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Thông tin chi tiết sản phẩm -->
+            <div class="col-lg-8">
+                <p style="font-size: 40px;">Áo sơ mi ullzang cổ vest tay cộc nhiều màu he14</p>
+                <span class="price"> ₫109.000</span>
+                <span class="decrease">GIẢM 45%</span>
+                <p style="font-size: 30px;">MÔ TẢ SẢN PHẨM </p>
+                <p style="font-size: 20px;">- Tên sản phẩm: Áo sơ mi lụa nữ ngắn tay, sơ mi ullazang tay cộc nhiều mà
+                    <br>
+                    - Thông tin sản phẩm: <br>
+                    6 màu: xanh dương, xanh mint, be, hồng, trắng và đen <br>
+                    Freesize dưới 60kg mang vừa <br>
+                    Thông số kích thước chi tiết: <a href="">xem thêm</a>
+                </p>
+
+                <div class="mb-3" style="margin-top: 20px;">
+                    <span for="quantity" class="form-label">Số Lượng: </span>
+                    <button type="button" class="quantity-btn">-</button>
+                    <input type="number" name="sl" id="sl">
+                    <button type="button" class="quantity-btn">+</button>
+                    <span> 478 sản phẩm có sẵn</span>
+                </div>
+
+
+                <div class="mb-3" style="margin-top: 20px;">
+                    <button class="btnthemgiohang">Thêm giỏ hàng <i class="material-icons"
+                            style="font-size: smaller;">local_grocery_store</i></button>
+                    <button class="btnmuangay">Mua ngay</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div style="color: orangered; margin-top: 30px; font-size: 20px;">ĐÁNH GIÁ SẢN PHẨM</div>
+        </div>
+        <div>
+            <div class="start">
+                <span class="star" onclick="rateProduct(1)">★</span>
+                <span class="star" onclick="rateProduct(2)">★</span>
+                <span class="star" onclick="rateProduct(3)">★</span>
+                <span class="star" onclick="rateProduct(4)">★</span>
+                <span class="star" onclick="rateProduct(5)">★</span>
+                <span style="color: black;">5/5</span>
+            </div>
+
+        </div>
+        <div class="row">
+            <div>
+                <img src="data:image/jpeg;base64,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"
+                    style="width: 100px;" alt="">
+            </div>
+            <div>
+                <span class="star" onclick="rateProduct(1)">★</span>
+                <span class="star" onclick="rateProduct(2)">★</span>
+                <span class="star" onclick="rateProduct(3)">★</span>
+                <span class="star" onclick="rateProduct(4)">★</span>
+                <span class="star" onclick="rateProduct(5)">★</span>
+
+
+                <div>
+                    <div style="font-size: 20px;">
+                        <span>2023-11-07</span>
+                        ||
+                        <span>Phân loại: xanh dương</span>
+                    </div>
+                    <div style="font-size: 20px;">Shop giao hàng nhanh, đóng gói cẩn thận</div>
+                    <div>
+                        <img src="https://down-vn.img.susercontent.com/file/d123d41a250abbd86271c08012adabef" alt=""
+                            style="width: 100px;">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <a href="#" class="btn btn-primary">Xem thêm</a>
+        <div class="row">
+            <div class="col-md-12" style="text-align: center;font-size: 30px;">
+                <p>SẢN PHẨM TƯƠNG TỰ</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <button class="my-button" style="border: none;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="https://down-vn.img.susercontent.com/file/d123d41a250abbd86271c08012adabef" alt=""
+                                style="width: 200px;">
+                        </div>
+                    </div>
+                    <!-- Hàng 2 -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            Áo sơ mi
+                        </div>
+                    </div>
+                    <!-- Hàng 3 -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            69.000
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div class="col-md-3">
+                <button class="my-button" style="border: none;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="https://down-vn.img.susercontent.com/file/d123d41a250abbd86271c08012adabef"
+                                style="width: 200px;" alt="">
+                        </div>
+                    </div>
+                    <!-- Hàng 2 -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            Áo sơ mi
+                        </div>
+                    </div>
+                    <!-- Hàng 3 -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            69.000
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div class="col-md-3">
+                <button class="my-button" style="border: none;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="https://down-vn.img.susercontent.com/file/d123d41a250abbd86271c08012adabef" alt=""
+                                style="width: 200px;">
+                        </div>
+                    </div>
+                    <!-- Hàng 2 -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            Áo sơ mi
+                        </div>
+                    </div>
+                    <!-- Hàng 3 -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            69.000
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div class="col-md-3">
+                <button class="my-button" style="border: none;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="https://down-vn.img.susercontent.com/file/d123d41a250abbd86271c08012adabef"
+                                style="width: 200px;" alt="">
+                        </div>
+                    </div>
+                    <!-- Hàng 2 -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            Áo sơ mi
+                        </div>
+                    </div>
+                    <!-- Hàng 3 -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            69.000
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div class="col-md-12" style="text-align: center;font-size: 15px;">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </div>
+
+
+
+        <!-- Nhúng Bootstrap JavaScript và các thư viện khác từ CDN nếu cần -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
