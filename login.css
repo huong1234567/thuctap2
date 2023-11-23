@@ -13,10 +13,11 @@
     margin: 40px;
     display: flex  ;
     justify-content: left;
-    width: 900px;
-    height: 500px;
-    border: 5px solid black;
+    width: 450px;
+    height: 580px;
+    border: 1px solid black;
     border-radius: 20px;
+    box-shadow: #fff;
 }
 
 .login-form {
@@ -24,11 +25,6 @@
     width: 400px;
     height: 400px;
     
-}
-
-.login-form  hr{
-    width: 400px;
-  
 }
 
 .login-form .login-link {
@@ -93,31 +89,26 @@
     text-decoration: none;
 }
 
-.login-right {
-    border-left: 5px solid black;
-}
-.login-right .login-footer {
-    margin: 25px;
-    width: 400px;
-    text-align: left;
-    border-radius: 10px;
-    font: 1em sans-serif;
+.login-form hr {
+    margin-top: 50px ;
 }
 
-.login-right .login-footer {
-    margin: 25px;
+.login-form .login-footer {
+    
     width: 400px;
     text-align: center;
     border-radius: 10px;
     font: 1em sans-serif;
 }
-.login-right .login-footer .login-a{
+
+
+.login-form .login-footer .login-a{
     margin: 10px 0;
 }
-.login-right .login-footer .login-a div{
+.login-form .login-footer .login-a div{
     margin: 10px 0;
 }
-.login-right .login-footer .login-a div a{
+.login-form .login-footer .login-a div a{
     height: 35px;
     width: 280px;
     border-radius: 25px;
