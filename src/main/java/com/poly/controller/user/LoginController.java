@@ -1,15 +1,19 @@
 package com.poly.controller.user;
 
 import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 import java.util.Optional;
 
 import javax.mail.MessagingException;
+import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -22,6 +26,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.poly.dao.AccountDAO;
 import com.poly.entity.Account;
+import com.poly.entity.Mailer;
 import com.poly.service.AccountService;
 import com.poly.service.CartService;
 import com.poly.service.CookieService;
@@ -42,11 +47,12 @@ public class LoginController {
 	@Autowired
 	CookieService cookieService;
 
-	@Autowired
-	MailerService mailer;
 
 	@Autowired
 	SessionService session;
+	
+	 @Autowired
+	    JavaMailSender javaMailSender;
 
 	@Autowired
 	CartService cart;
@@ -147,29 +153,72 @@ public class LoginController {
 		}
 		return "user/register";
 	}
+	
+	private void send(String to, String subject, String body) throws MessagingException {
+        MimeMessage message = javaMailSender.createMimeMessage();
+        MimeMessageHelper helper = new MimeMessageHelper(message, true);
+        helper.setTo(to);
+        helper.setSubject(subject);
+        helper.setText(body, true);
 
-	@PostMapping("/forgot-password")
-	public String forgotPassword(@RequestParam("email") String email, HttpServletRequest request, Model model)
-			throws Exception {
-		try {
-			// chuỗi ngẫu nhiên có độ dài 50 ký tự để làm token
-			String token = RandomString.make(50);
-			// cập nhật token cho tài khoản được liên kết với địa chỉ email
-			accountService.updateToken(token, email);
-			// đường dẫn reset password bằng cách kết hợp địa chỉ trang web
-			String resetLink = getSiteURL(request) + "/reset-password?token=" + token;
-			// Gửi email chứa đường dẫn reset password tới địa chỉ email đã cung cấp
-			mailer.sendEmail(email, resetLink);
-			// Thêm Thông Báo
-			model.addAttribute("message", "We have sent a reset password link to your email. "
-					+ "If you don't see the email, check your spam folder.");
-		} catch (MessagingException e) {
-			e.printStackTrace();
-			model.addAttribute("error", "Error while sending email");
-		}
-		return "user/forgot-password";
+        javaMailSender.send(message);
+    }
+	
+	private String generateRandomCode() {
+	    // Sử dụng SecureRandom để tạo số ngẫu nhiên
+	    SecureRandom random = new SecureRandom();
+	    
+	    // Tạo một số ngẫu nhiên có độ dài là 6
+	    int randomCode = 100000 + random.nextInt(900000);
+
+	    return String.valueOf(randomCode);
 	}
+	
+	 String randomCode = generateRandomCode();
+	@PostMapping("/forgot-password")
+	public String forgotPassword(@RequestParam("email") String email, HttpServletRequest request, Model model){
+		  Account foundAccount = dao.findByEmail(email);
+			  if (foundAccount != null) {
+				  try {
+			            // Tạo mã ngẫu nhiên
+			           
 
+			            // Đặt chủ đề và nội dung của email
+			            String subject = "Quên mật khẩu";
+			            String body = "Mã xác nhận của bạn là: " + randomCode;
+
+			            // Gửi email
+			            send(email, subject, body);
+			        } catch (Exception e) {
+			            e.printStackTrace(); // Xử lý lỗi gửi email
+			        }
+			 model.addAttribute("message", "Gửi mã thành công");
+			 return "user/result";
+			 }else {
+				  model.addAttribute("message", "Không tìm thấy địa chỉ email trong hệ thống.");
+		            return "user/forgot-password";
+			 }
+		
+		
+	}
+	
+	 @PostMapping("/sendma")
+	    public String handleVerificationCode(@RequestParam("ma") String verificationCode, Model model) {
+	        // Kiểm tra xem mã nhập từ form có trùng với mã đã gửi đi hay không
+	        if (verificationCode.equals(randomCode)) {
+	       
+	            model.addAttribute("message", "Xác nhận thành công!");
+
+	            return "redirect:/index";  // Chuyển hướng đến trang chính hoặc trang bạn muốn
+	        } else {
+	           
+	            model.addAttribute("message", "Mã xác nhận không đúng. Vui lòng thử lại.");
+
+	            return "user/result";  // Hoặc trang nào bạn muốn quay lại để nhập lại mã
+	        }
+	    }
+	 
+	
 	@PostMapping("/reset-password")
 	public String processResetPassword(@RequestParam("token") String token, @RequestParam("password") String password,
 			HttpServletResponse response, Model model) {

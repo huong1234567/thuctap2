@@ -37,4 +37,9 @@ public interface AccountService {
 
 	void updatePassword(Account entity, String newPassword);
 
+
+
+	Account checkEmailExists(String email);
+
+
 }

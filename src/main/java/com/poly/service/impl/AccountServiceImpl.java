@@ -6,6 +6,7 @@ import java.util.Base64;
 import java.util.List;
 import java.util.Optional;
 
+import javax.transaction.Transactional;
 import javax.xml.bind.DatatypeConverter;
 
 import org.springframework.beans.BeanUtils;
@@ -53,6 +54,17 @@ public class AccountServiceImpl implements AccountService {
 	@Override
 	public boolean existsById(String id) {
 		return dao.existsById(id);
+	}
+	
+
+	
+
+	
+
+	@Override
+	public Account checkEmailExists(String email) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
@@ -119,4 +131,7 @@ public class AccountServiceImpl implements AccountService {
 		entity.setToken("");
 		dao.save(entity);
 	}
+	
+	
+	
 }

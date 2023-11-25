@@ -37,18 +37,21 @@
         <div class="login-page__all">
             <div class="login-page__banner" data-bg="assets/img/login-bg.jpg"></div>
             <div class="login-page__main">
-                <form action="forgot-password" method="post">
-                    <div class="login-form">
+                <form action="sendma" method="post">
+                     <div class="login-form">
                         <div class="login-form__top">
-                            <h2 class="login-form__title">Tìm tài khoản</h2>
-                            <p class="login-form__text">Vui lòng nhập email hoặc số điện thại di động để tìm kiếm tài khoản của bạn</p>
+                            <h2 class="login-form__title">Nhập mã</h2>
+                            <p class="login-form__text">Mã xác nhận đã được gửi về email của bạn, vui lòng kiểm tra email và nhập mã xác nhận</p>
                         </div>
-	                    <span class="login-form__label">Email</span>
-                        <input class="text-input" type="email" name="email" placeholder="Nhập email" required>
+	                    <span class="login-form__label">Mã xác nhận</span>
+                        <input class="text-input" type="text" name="ma" placeholder="Nhập mã xác nhận" required>
                         <button class="login-form__button button" type="submit">
-                            <span class="button__text">Tìm kiếm</span>
+                            <span class="button__text">Xác nhận</span>
                         </button>
-                    </div>
+						<c:if test="${not empty message}">
+							<div style="margin-top:20px;color:red;text-align:center">${message}</div>
+						</c:if>
+                    </div> 
                 </form>
                 <img class="login-page__vector" data-lazy="assets/img/svg/vector-login.svg">
             </div>
